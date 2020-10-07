@@ -121,12 +121,60 @@ main {
     overflow: auto;
     background-color: orange;
 }
+
+main a {
+    color: white;
+    text-decoration: none;
+}
 /* Fine main */
 
+/* Inizio nav */
 nav {
     height: 60px;
-    background-color: blue;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    align-items: center;
 }
+
+nav .hamburger-menu {
+    font-size: 30px;
+}
+
+nav .menu {
+    display: none;
+}
+
+nav .menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav .menu ul li a {
+    position: relative;
+    display: block;
+    padding: 10px 25px;
+    opacity: 0.7;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+nav .menu ul li a:hover {
+    opacity: 1;
+}
+
+nav .menu ul li a:hover::after {
+    content: "";
+    display: block;
+    width: 30%;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #43da43;
+}
+/* Fine nav */
 
 section {
     padding-top: 60px;
@@ -157,5 +205,19 @@ footer {
 
     aside a {
         justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    nav {
+        justify-content: center;
+    }
+
+    nav .hamburger-menu {
+        display: none;
+    }
+
+    nav .menu {
+        display: block;
     }
 }
