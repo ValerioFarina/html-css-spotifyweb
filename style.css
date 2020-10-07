@@ -14,7 +14,11 @@ body {
     background-color: green;
 }
 
+/* Inizio aside */
 aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 90px;
     padding: 20px;
     flex-shrink: 0;
@@ -47,15 +51,11 @@ aside .logo h2 i {
     top: 10px;
 }
 
-aside .main-menu {
+aside ul {
     list-style-type: none;
 }
 
-aside .main-menu li:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-aside .main-menu a {
+aside a {
     display: flex;
     height: 30px;
     justify-content: center;
@@ -64,16 +64,30 @@ aside .main-menu a {
     color: grey;
 }
 
-aside .main-menu a .icon {
-    width: 50px;
-}
-
-aside .main-menu a i {
-    font-size: 25px;
-}
-
-aside .main-menu a:hover {
+aside a:hover * {
     color: white;
+}
+
+aside h5 {
+    display: none;
+    color: grey;
+}
+
+aside a .icon i {
+    display: block;
+}
+
+aside .main-menu {
+    margin-bottom: 40px;
+}
+
+aside .main-menu ul li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+aside a .icon {
+    width: 50px;
+    font-size: 25px;
 }
 
 aside .main-menu a:hover::before {
@@ -86,15 +100,28 @@ aside .main-menu a:hover::before {
     height: 30px;
 }
 
-aside .main-menu a h4 {
-    display: none;
+aside .recently-played-menu ul {
+    margin-top: 10px;
 }
 
+aside .bottom .install {
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+}
+
+aside .bottom .install .icon {
+    font-size: 18px;
+}
+/* Fine aside */
+
+/* Inizio main */
 main {
     flex-grow: 1;
     overflow: auto;
     background-color: orange;
 }
+/* Fine main */
 
 nav {
     height: 60px;
@@ -124,11 +151,11 @@ footer {
         display: inline-block;
     }
 
-    aside .main-menu a h4 {
-        display: inline-block;
+    aside h5 {
+        display: block;
     }
 
-    aside .main-menu a {
+    aside a {
         justify-content: flex-start;
     }
 }
