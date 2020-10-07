@@ -3,3 +3,40 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#wrapper {
+    height: calc(100vh - 90px);
+    display: flex;
+}
+
+aside {
+    width: 80px;
+    background-color: black;
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+    background-color: orange;
+    overflow: auto;
+}
+
+nav {
+    height: 60px;
+    background-color: blue;
+}
+
+section {
+    padding-top: 60px;
+}
+
+footer {
+    height: 90px;
+    background-color: red;
+}
+
+@media screen and (min-width: 768px) {
+    aside {
+        width: 180px;
+    }
+}
