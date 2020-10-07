@@ -4,21 +4,51 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: sans-serif;
+}
+
 #wrapper {
-    height: calc(100vh - 90px);
     display: flex;
+    height: calc(100vh - 90px);
+    background-color: green;
 }
 
 aside {
-    width: 80px;
-    background-color: black;
+    width: 90px;
+    padding: 20px;
     flex-shrink: 0;
+    background-color: #000000c7;
+}
+
+aside .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+aside .logo > i {
+    font-size: 40px;
+}
+
+aside .logo h2 {
+    display: none;
+    position: relative;
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+aside .logo h2 i {
+    font-size: 5px;
+    position: absolute;
+    top: 10px;
 }
 
 main {
     flex-grow: 1;
-    background-color: orange;
     overflow: auto;
+    background-color: orange;
 }
 
 nav {
@@ -37,6 +67,14 @@ footer {
 
 @media screen and (min-width: 768px) {
     aside {
-        width: 180px;
+        width: 230px;
+    }
+
+    aside .logo {
+        justify-content: flex-start;
+    }
+
+    aside .logo h2 {
+        display: inline-block;
     }
 }
