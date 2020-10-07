@@ -18,6 +18,7 @@ aside {
     width: 90px;
     padding: 20px;
     flex-shrink: 0;
+    text-align: center;
     background-color: #000000c7;
 }
 
@@ -25,6 +26,7 @@ aside .logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
     color: white;
 }
 
@@ -43,6 +45,49 @@ aside .logo h2 i {
     font-size: 5px;
     position: absolute;
     top: 10px;
+}
+
+aside .main-menu {
+    list-style-type: none;
+}
+
+aside .main-menu li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+aside .main-menu a {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: grey;
+}
+
+aside .main-menu a .icon {
+    width: 50px;
+}
+
+aside .main-menu a i {
+    font-size: 25px;
+}
+
+aside .main-menu a:hover {
+    color: white;
+}
+
+aside .main-menu a:hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    left: 0;
+    background-color: #43da43;
+    height: 30px;
+}
+
+aside .main-menu a h4 {
+    display: none;
 }
 
 main {
@@ -68,6 +113,7 @@ footer {
 @media screen and (min-width: 768px) {
     aside {
         width: 230px;
+        text-align: left;
     }
 
     aside .logo {
@@ -76,5 +122,13 @@ footer {
 
     aside .logo h2 {
         display: inline-block;
+    }
+
+    aside .main-menu a h4 {
+        display: inline-block;
+    }
+
+    aside .main-menu a {
+        justify-content: flex-start;
     }
 }
