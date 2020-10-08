@@ -294,8 +294,6 @@ footer .center .top a:last-child {
     display: none;
 }
 
-
-
 footer .center .top .far.fa-pause-circle {
     font-size: 28px;
 }
@@ -309,11 +307,14 @@ footer .center .bottom span {
     font-size: 13px;
 }
 
+footer .center .bottom input[type=range] {
+    margin: 0 10px;
+}
+
 input[type=range] {
     background-color: transparent;
     -webkit-appearance: none;
     width: 100%;
-    margin: 0 10px;
 }
 
 input[type=range]:focus {
@@ -407,7 +408,18 @@ footer .right {
     display: none;
     width: 180px;
     margin-left: 20px;
-    background: green;
+    font-size: 13px;
+}
+
+footer .right .volume {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+
+footer .right .volume input[type=range] {
+    margin-left: 5px;
 }
 /* Fine footer */
 
@@ -464,7 +476,9 @@ footer .right {
     }
 
     footer .right {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
