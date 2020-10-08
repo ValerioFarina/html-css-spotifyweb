@@ -20,9 +20,9 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-shrink: 0;
     width: 90px;
     padding: 20px;
-    flex-shrink: 0;
     text-align: center;
     background-color: #000000c7;
 }
@@ -47,9 +47,9 @@ aside .logo h2 {
 }
 
 aside .logo h2 i {
-    font-size: 5px;
     position: absolute;
     top: 10px;
+    font-size: 5px;
 }
 
 aside ul {
@@ -58,9 +58,9 @@ aside ul {
 
 aside a {
     display: flex;
-    height: 32px;
     justify-content: center;
     align-items: center;
+    height: 32px;
     text-decoration: none;
     color: grey;
 }
@@ -87,14 +87,18 @@ aside .main-menu {
     margin-bottom: 30px;
 }
 
+aside .main-menu li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
 aside .main-menu a:hover::before {
     content: "";
     display: block;
     position: absolute;
-    width: 5px;
     left: 0;
-    background-color: #43da43;
     height: 32px;
+    width: 5px;
+    background-color: #43da43;
 }
 
 aside .recently-played-menu ul {
@@ -105,22 +109,21 @@ aside .recently-played-menu ul li:not(:last-child) {
     margin-bottom: 10px;
 }
 
-aside .bottom .install {
+aside .install {
     padding-bottom: 10px;
     border-bottom: 1px solid grey;
     margin-bottom: 10px;
 }
 
-aside .bottom .install .icon {
+aside .install .icon {
     font-size: 18px;
 }
 /* Fine aside */
 
-/* Inizio main */
 main {
     flex-grow: 1;
-    overflow: auto;
     padding: 20px;
+    overflow: auto;
     color: white;
 }
 
@@ -128,13 +131,12 @@ main a {
     color: white;
     text-decoration: none;
 }
-/* Fine main */
 
 /* Inizio nav */
 nav {
-    height: 40px;
     display: flex;
     align-items: center;
+    height: 40px;
 }
 
 nav .hamburger-menu {
@@ -184,26 +186,28 @@ section {
 }
 
 section h1 {
-    font-size: 35px;
-    margin-bottom: 25px;
     padding: 0 15px;
+    margin-bottom: 25px;
+    font-size: 25px;
+    text-align: center;
 }
 
-.container-cards {
+section .container-cards {
     display: flex;
     flex-wrap: wrap;
 }
 
 section .card {
-    max-width: calc(100% - 30px);
-    margin: 0 15px;
     flex-grow: 1;
+    max-width: calc(100% - 30px);
+    margin: 20px 15px 0 15px;
     text-align: center;
-    margin-top: 20px;
 }
 
 section .card a {
     display: block;
+    max-width: 230px;
+    margin: auto;
 }
 
 section .card.artist a:first-child {
@@ -224,8 +228,8 @@ section .card a:last-child:hover {
 }
 
 section .card img {
-    width: 100%;
     display: block;
+    width: 100%;
 }
 /* Fine section */
 
@@ -256,9 +260,9 @@ footer .left {
     margin-right: 20px;
 }
 
-footer .left img {
-    height: 40px;
+footer .left .album img {
     display: block;
+    height: 40px;
 }
 
 footer .left .song {
@@ -307,21 +311,21 @@ footer .center .bottom span {
     font-size: 13px;
 }
 
-footer .center .bottom input[type=range] {
+footer .center .bottom input[type="range"] {
     margin: 0 10px;
 }
 
-input[type=range] {
+input[type="range"] {
     background-color: transparent;
     -webkit-appearance: none;
     width: 100%;
 }
 
-input[type=range]:focus {
+input[type="range"]:focus {
     outline: none;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
     background: rgba(108, 113, 115, 0.87);
     border: 0;
     border-radius: 2.9px;
@@ -330,7 +334,7 @@ input[type=range]::-webkit-slider-runnable-track {
     cursor: pointer;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
     margin-top: -3px;
     width: 10px;
     height: 10px;
@@ -341,11 +345,11 @@ input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
+input[type="range"]:focus::-webkit-slider-runnable-track {
     background: #c4c6c6;
 }
 
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
     background: rgba(108, 113, 115, 0.87);
     border: 0;
     border-radius: 2.9px;
@@ -354,7 +358,7 @@ input[type=range]::-moz-range-track {
     cursor: pointer;
 }
 
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
     width: 10px;
     height: 10px;
     background: #ffffff;
@@ -363,7 +367,7 @@ input[type=range]::-moz-range-thumb {
     cursor: pointer;
 }
 
-input[type=range]::-ms-track {
+input[type="range"]::-ms-track {
     background: transparent;
     border-color: transparent;
     border-width: 5.8px 0;
@@ -373,19 +377,19 @@ input[type=range]::-ms-track {
     cursor: pointer;
 }
 
-input[type=range]::-ms-fill-lower {
+input[type="range"]::-ms-fill-lower {
     background: rgba(108, 113, 115, 0.87);
     border: 0;
     border-radius: 5.8px;
 }
 
-input[type=range]::-ms-fill-upper {
+input[type="range"]::-ms-fill-upper {
     background: rgba(108, 113, 115, 0.87);
     border: 0;
     border-radius: 5.8px;
 }
 
-input[type=range]::-ms-thumb {
+input[type="range"]::-ms-thumb {
     width: 10px;
     height: 10px;
     background: #ffffff;
@@ -396,11 +400,11 @@ input[type=range]::-ms-thumb {
   /*Needed to keep the Edge thumb centred*/
 }
 
-input[type=range]:focus::-ms-fill-lower {
+input[type="range"]:focus::-ms-fill-lower {
     background: rgba(108, 113, 115, 0.87);
 }
 
-input[type=range]:focus::-ms-fill-upper {
+input[type="range"]:focus::-ms-fill-upper {
     background: rgba(108, 113, 115, 0.87);
 }
 
@@ -418,13 +422,18 @@ footer .right .volume {
     width: 60%;
 }
 
-footer .right .volume input[type=range] {
+footer .right .volume input[type="range"] {
     margin-left: 5px;
 }
 /* Fine footer */
 
 /* Inizio media queries */
 @media screen and (min-width: 468px) {
+    section h1 {
+        font-size: 35px;
+        text-align: left;
+    }
+
     section .card {
         max-width: calc((100% - 30px * 2) / 2);
     }
@@ -455,6 +464,10 @@ footer .right .volume input[type=range] {
 
     aside a {
         justify-content: flex-start;
+    }
+
+    aside .main-menu li:not(:last-child) {
+        margin-bottom: 0;
     }
 
     footer .left {
