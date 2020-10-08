@@ -11,7 +11,8 @@ body {
 #wrapper {
     display: flex;
     height: calc(100vh - 90px);
-    background-color: green;
+    background: rgb(2,0,36);
+    background: linear-gradient(347deg, rgba(2,0,36,1) 0%, rgba(161,146,12,1) 73%);
 }
 
 /* Inizio aside */
@@ -30,7 +31,7 @@ aside .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: white;
 }
 
@@ -57,7 +58,7 @@ aside ul {
 
 aside a {
     display: flex;
-    height: 30px;
+    height: 32px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -73,21 +74,17 @@ aside h5 {
     color: grey;
 }
 
+aside a .icon {
+    width: 40px;
+    font-size: 21px;
+}
+
 aside a .icon i {
     display: block;
 }
 
 aside .main-menu {
-    margin-bottom: 40px;
-}
-
-aside .main-menu ul li:not(:last-child) {
-    margin-bottom: 20px;
-}
-
-aside a .icon {
-    width: 50px;
-    font-size: 25px;
+    margin-bottom: 30px;
 }
 
 aside .main-menu a:hover::before {
@@ -97,11 +94,15 @@ aside .main-menu a:hover::before {
     width: 5px;
     left: 0;
     background-color: #43da43;
-    height: 30px;
+    height: 32px;
 }
 
 aside .recently-played-menu ul {
     margin-top: 10px;
+}
+
+aside .recently-played-menu ul li:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 aside .bottom .install {
@@ -119,7 +120,8 @@ aside .bottom .install .icon {
 main {
     flex-grow: 1;
     overflow: auto;
-    background-color: orange;
+    padding: 20px;
+    color: white;
 }
 
 main a {
@@ -131,7 +133,6 @@ main a {
 /* Inizio nav */
 nav {
     height: 60px;
-    padding: 20px 20px 0 20px;
     display: flex;
     align-items: center;
 }
@@ -152,7 +153,7 @@ nav .menu ul {
 nav .menu ul li a {
     position: relative;
     display: block;
-    padding: 10px 25px;
+    padding: 10px 24px;
     opacity: 0.7;
     text-transform: uppercase;
     font-weight: bold;
@@ -176,16 +177,73 @@ nav .menu ul li a:hover::after {
 }
 /* Fine nav */
 
+/* Inizio section */
 section {
-    padding-top: 60px;
+    padding-top: 40px;
+    margin: auto;
 }
 
+section h1 {
+    font-size: 35px;
+    margin-bottom: 25px;
+    padding: 0 15px;
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section .card {
+    max-width: calc(100% - 30px);
+    margin: 0 15px;
+    flex-grow: 1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+section .card a {
+    display: block;
+}
+
+section .card.artist a:first-child {
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+section .card a:last-child {
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+section .card a:first-child:hover + a:last-child,
+section .card a:last-child:hover {
+    opacity: 1;
+}
+
+section .card img {
+    width: 100%;
+    display: block;
+}
+/* Fine section */
+
+/* Inizio footer */
 footer {
     height: 90px;
     background-color: red;
 }
+/* Fine footer */
 
-@media screen and (min-width: 768px) {
+/* Inizio media queries */
+@media screen and (min-width: 468px) {
+    section .card {
+        max-width: calc((100% - 30px * 2) / 2);
+    }
+}
+
+@media screen and (min-width: 668px) {
     aside {
         width: 230px;
         text-align: left;
@@ -208,6 +266,12 @@ footer {
     }
 }
 
+@media screen and (min-width: 806px) {
+    section .card {
+        max-width: calc((100% - 30px * 3) / 3);
+    }
+}
+
 @media screen and (min-width: 1024px) {
     nav {
         justify-content: center;
@@ -220,4 +284,23 @@ footer {
     nav .menu {
         display: block;
     }
+
+    section {
+        max-width: 800px;
+    }
+
+    section .card {
+        max-width: calc((100% - 30px * 4) / 4);
+    }
 }
+
+@media screen and (min-width: 1200px) {
+    section {
+        max-width: 968px;
+    }
+
+    section .card {
+        max-width: calc((100% - 30px * 5) / 5);
+    }
+}
+/* Fine media queries */
