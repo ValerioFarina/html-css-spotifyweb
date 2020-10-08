@@ -31,7 +31,7 @@ aside .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: white;
 }
 
@@ -132,7 +132,7 @@ main a {
 
 /* Inizio nav */
 nav {
-    height: 60px;
+    height: 40px;
     display: flex;
     align-items: center;
 }
@@ -231,8 +231,153 @@ section .card img {
 
 /* Inizio footer */
 footer {
+    display: flex;
+    justify-content: space-between;
     height: 90px;
-    background-color: red;
+    padding: 20px;
+    background-color: #302b2b;
+    color: rgba(158, 162, 164, 1);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(158, 162, 164, 1);
+}
+
+footer a:hover {
+    color: white;
+}
+
+footer .left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70px;
+    margin-right: 20px;
+}
+
+footer .left img {
+    height: 40px;
+    display: block;
+}
+
+footer .left .song {
+    display: none;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+footer .left .song h5 {
+    margin-bottom: 5px;
+}
+
+footer .left .heart i {
+    display: block;
+}
+
+footer .center {
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+input[type=range] {
+    background-color: transparent;
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: rgba(108, 113, 115, 0.87);
+    border: 0;
+    border-radius: 2.9px;
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    margin-top: -5.8px;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 0.3px solid #ffffff;
+    border-radius: 37px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #c4c6c6;
+}
+
+input[type=range]::-moz-range-track {
+    background: rgba(108, 113, 115, 0.87);
+    border: 0;
+    border-radius: 2.9px;
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 0.3px solid #ffffff;
+    border-radius: 37px;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 5.8px 0;
+    color: transparent;
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: rgba(108, 113, 115, 0.87);
+    border: 0;
+    border-radius: 5.8px;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: rgba(108, 113, 115, 0.87);
+    border: 0;
+    border-radius: 5.8px;
+}
+
+input[type=range]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 0.3px solid #ffffff;
+    border-radius: 37px;
+    cursor: pointer;
+    margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: rgba(108, 113, 115, 0.87);
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: rgba(108, 113, 115, 0.87);
+}
+
+footer .right {
+    display: none;
+    width: 180px;
+    margin-left: 20px;
+    background: green;
 }
 /* Fine footer */
 
@@ -263,6 +408,18 @@ footer {
 
     aside a {
         justify-content: flex-start;
+    }
+
+    footer .left {
+        width: 80px;
+    }
+
+    footer .left img {
+        height: 50px;
+    }
+
+    footer .right {
+        display: block;
     }
 }
 
@@ -301,6 +458,14 @@ footer {
 
     section .card {
         max-width: calc((100% - 30px * 5) / 5);
+    }
+
+    footer .left {
+        width: 230px;
+    }
+
+    footer .left .song {
+        display: block;
     }
 }
 /* Fine media queries */
